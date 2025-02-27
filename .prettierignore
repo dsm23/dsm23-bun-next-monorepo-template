@@ -1,0 +1,13 @@
+__tmp__/
+.turbo
+.next/
+build/
+dist/
+node_modules/
+target/
+compiled/
+coverage
+
+lerna.json
+test-timings.json
+pnpm-lock.yaml
