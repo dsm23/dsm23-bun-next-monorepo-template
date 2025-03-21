@@ -45,5 +45,8 @@
   ],
   "enabledManagers": ["bun", "bun-version", "dockerfile", "github-actions"],
   "rebaseWhen": "conflicted",
+  "patch": {
+    "rebaseWhen": "behind-base-branch"
+  },
   "osvVulnerabilityAlerts": true
 }
