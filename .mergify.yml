@@ -3,6 +3,7 @@ pull_request_rules:
   - name: automatic approval
     conditions:
       - author=dsm23
+      - check-success=amd64
       - check-success=analyze-bundle
       - check-success=build
       - check-success~=codeql \([a-z]*\)
@@ -12,7 +13,7 @@ pull_request_rules:
       - check-success=lint
       - check-success=pr-title
       - check-success=zizmor
-      - "#check-success>=10"
+      - "#check-success>=11"
     actions:
       review:
         type: APPROVE
@@ -20,6 +21,7 @@ pull_request_rules:
   - name: automatic approval for Renovate pull requests
     conditions:
       - author=renovate[bot]
+      - check-success=amd64
       - check-success=analyze-bundle
       - check-success=build
       - check-success~=codeql \([a-z]*\)
@@ -29,7 +31,7 @@ pull_request_rules:
       - check-success=lint
       - check-success=pr-title
       - check-success=zizmor
-      - "#check-success>=10"
+      - "#check-success>=11"
     actions:
       review:
         type: APPROVE
@@ -37,6 +39,7 @@ pull_request_rules:
   # merge
   - name: Automatically merge when GitHub Actions jobs succeed
     conditions:
+      - check-success=amd64
       - check-success=analyze-bundle
       - check-success=build
       - check-success~=codeql \([a-z]*\)
@@ -46,7 +49,7 @@ pull_request_rules:
       - check-success=lint
       - check-success=pr-title
       - check-success=zizmor
-      - "#check-success>=10"
+      - "#check-success>=11"
       - "#approved-reviews-by>=1"
     actions:
       merge:
