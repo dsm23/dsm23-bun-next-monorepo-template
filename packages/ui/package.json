@@ -16,15 +16,15 @@
     "@repo/typescript-config": "*",
     "@turbo/gen": "2.5.1",
     "@types/node": "22.14.1",
-    "@types/react": "19.0.10",
-    "@types/react-dom": "19.0.4",
+    "@types/react": "19.1.2",
+    "@types/react-dom": "19.1.2",
     "eslint": "9.25.1",
     "prettier-plugin-css-order": "2.1.2",
     "prettier-plugin-tailwindcss": "0.6.11",
     "typescript": "5.8.3"
   },
   "dependencies": {
-    "react": "19.0.0",
-    "react-dom": "19.0.0"
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
   }
 }
