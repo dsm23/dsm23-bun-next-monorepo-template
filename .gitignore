@@ -37,6 +37,13 @@ yarn-error.log*
 .DS_Store
 *.pem
 
-# Settings folder
-.vscode/settings.json
-.idea/
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
