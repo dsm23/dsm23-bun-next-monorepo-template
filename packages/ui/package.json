@@ -18,7 +18,7 @@
     "@types/node": "22.15.18",
     "@types/react": "19.1.4",
     "@types/react-dom": "19.1.5",
-    "eslint": "9.26.0",
+    "eslint": "9.27.0",
     "prettier-plugin-css-order": "2.1.2",
     "prettier-plugin-tailwindcss": "0.6.11",
     "typescript": "5.8.3"
