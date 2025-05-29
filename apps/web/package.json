@@ -19,12 +19,14 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "@total-typescript/ts-reset": "0.6.1",
     "@types/node": "22.15.24",
     "@types/react": "19.1.6",
     "@types/react-dom": "19.1.5",
     "eslint": "9.27.0",
     "prettier-plugin-css-order": "2.1.2",
     "prettier-plugin-tailwindcss": "0.6.11",
+    "typed-query-selector": "2.12.0",
     "typescript": "5.8.3"
   }
 }
