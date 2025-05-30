@@ -25,7 +25,7 @@
     "@types/react-dom": "19.1.5",
     "eslint": "9.27.0",
     "prettier-plugin-css-order": "2.1.2",
-    "prettier-plugin-tailwindcss": "0.6.11",
+    "prettier-plugin-tailwindcss": "0.6.12",
     "typed-query-selector": "2.12.0",
     "typescript": "5.8.3"
   }
