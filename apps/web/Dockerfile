@@ -20,10 +20,7 @@ RUN turbo prune web --docker
 FROM base AS installer
 WORKDIR /app
 
-ENV HUSKY=0
-
-# for the sake of the prepare script
-COPY .husky/ ./.husky/
+ENV LEFTHOOK=0
 
 # First install the dependencies (as they change less often)
 COPY --from=builder /app/out/json/ .
