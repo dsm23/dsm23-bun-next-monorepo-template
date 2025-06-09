@@ -5,11 +5,7 @@ FROM oven/bun:1.2.15-alpine@sha256:37b37b8cefbf88956d4cbecbc5b3ac4b3f1a9fb051f74
 FROM base AS builder
 WORKDIR /app
 
-# Replace <your-major-version> with the major version installed in your repository. For example:
-# RUN yarn global add turbo@^2
-# https://github.com/vercel/turborepo/discussions/7456#discussioncomment-12585058
-# TODO: move away from canary
-RUN bun i -g turbo@^2.4.5-canary.7
+RUN bun i -g turbo@2.5.4
 COPY . .
 
 # Generate a partial monorepo with a pruned lockfile for a target workspace.
