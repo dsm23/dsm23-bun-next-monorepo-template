@@ -19,7 +19,7 @@
     "cz-conventional-changelog": "3.3.0",
     "lefthook": "1.11.14",
     "nextjs-bundle-analysis": "0.5.0",
-    "prettier": "3.6.0",
+    "prettier": "3.6.1",
     "turbo": "2.5.4",
     "typescript": "5.8.3"
   },
