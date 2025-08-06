@@ -11,10 +11,6 @@
     ":enableVulnerabilityAlerts",
     ":pinAllExceptPeerDependencies"
   ],
-  "bun-version": {
-    "managerFilePatterns": ["/(^|/)\\.bun-version$/", "/(^|/)package.json$/"],
-    "versioning": "npm"
-  },
   "customManagers": [
     {
       "customType": "regex",
@@ -24,6 +20,13 @@
       "matchStrings": [
         "\\/\\/ renovate: datasource=(?<datasource>[a-zA-Z0-9-._]+?) depName=(?<depName>[^\\s]+?)(?: (?:lookupName|packageName)=(?<packageName>[^\\s]+?))?(?: versioning=(?<versioning>[^\\s]+?))?(?: extractVersion=(?<extractVersion>[^\\s]+?))?\\s+importOrderTypeScriptVersion\\s*\\:\\s*[\"']?(?<currentValue>.+?)[\"']"
       ]
+    },
+    {
+      "customType": "regex",
+      "managerFilePatterns": ["/(^|/)package.json$/"],
+      "depNameTemplate": "bun",
+      "datasourceTemplate": "npm",
+      "matchStrings": ["\"packageManager\"\\:\\s+\"(?<currentValue>\\S+)\"\\s"]
     }
   ],
   "packageRules": [
@@ -49,8 +52,7 @@
         "playwright",
         "@playwright/test",
         "mcr.microsoft.com/playwright"
-      ],
-      "matchUpdateTypes": ["digest", "patch", "minor", "major"]
+      ]
     },
     {
       "groupName": "bun monorepo",
@@ -58,7 +60,6 @@
       "matchUpdateTypes": ["digest", "patch", "minor", "major"]
     }
   ],
-  "enabledManagers": ["bun", "bun-version", "dockerfile", "github-actions"],
   "rebaseWhen": "conflicted",
   "patch": {
     "rebaseWhen": "behind-base-branch"
