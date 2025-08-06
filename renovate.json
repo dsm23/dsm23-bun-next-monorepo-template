@@ -11,6 +11,11 @@
     ":enableVulnerabilityAlerts",
     ":pinAllExceptPeerDependencies"
   ],
+  "bun-version": {
+    "managerFilePatterns": ["/(^|/)package.json$/"],
+    "versioning": "npm",
+    "extractVersion": "\"packageManager\"\\:\\s+\"bun@(?<currentValue>\\d+\\.\\d+)\"\\s"
+  },
   "customManagers": [
     {
       "customType": "regex",
@@ -20,13 +25,6 @@
       "matchStrings": [
         "\\/\\/ renovate: datasource=(?<datasource>[a-zA-Z0-9-._]+?) depName=(?<depName>[^\\s]+?)(?: (?:lookupName|packageName)=(?<packageName>[^\\s]+?))?(?: versioning=(?<versioning>[^\\s]+?))?(?: extractVersion=(?<extractVersion>[^\\s]+?))?\\s+importOrderTypeScriptVersion\\s*\\:\\s*[\"']?(?<currentValue>.+?)[\"']"
       ]
-    },
-    {
-      "customType": "regex",
-      "managerFilePatterns": ["/(^|/)package.json$/"],
-      "depNameTemplate": "bun",
-      "datasourceTemplate": "npm",
-      "matchStrings": ["\"packageManager\"\\:\\s+\"(?<currentValue>\\S+)\"\\s"]
     }
   ],
   "packageRules": [
@@ -56,8 +54,7 @@
     },
     {
       "groupName": "bun monorepo",
-      "matchPackageNames": ["bun", "@types/bun", "oven/bun"],
-      "matchUpdateTypes": ["digest", "patch", "minor", "major"]
+      "matchPackageNames": ["bun", "@types/bun", "oven/bun"]
     }
   ],
   "rebaseWhen": "conflicted",
