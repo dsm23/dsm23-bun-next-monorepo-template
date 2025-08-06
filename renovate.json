@@ -11,6 +11,10 @@
     ":enableVulnerabilityAlerts",
     ":pinAllExceptPeerDependencies"
   ],
+  "bun-version": {
+    "managerFilePatterns": ["/(^|/)\\.bun-version$/", "/(^|/)package.json$/"],
+    "versioning": "npm"
+  },
   "customManagers": [
     {
       "customType": "regex",
