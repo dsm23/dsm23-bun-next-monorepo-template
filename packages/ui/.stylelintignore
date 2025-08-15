@@ -1,0 +1,18 @@
+# Dist Folder
+dist
+build
+.turbo
+.swc
+
+# Public Folder
+public
+
+# Jest
+coverage
+
+# Storybook
+storybook-static
+
+# Playwright
+playwright-report
+test-results
