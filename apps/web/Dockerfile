@@ -2,10 +2,13 @@
 
 FROM oven/bun:1.2.20-alpine@sha256:5ade1ec6fc2b74f825d48d33d98d7450fb960426d5d0df9a8f27b419da832012 AS base
 
+# renovate: datasource=npm depName=turbo
+ARG TURBO_VERSION="2.5.6"
+
 FROM base AS builder
 WORKDIR /app
 
-RUN bun i -g turbo@2.5.4
+RUN bun i -g "turbo@${TURBO_VERSION}"
 COPY . .
 
 # Generate a partial monorepo with a pruned lockfile for a target workspace.
