@@ -12,21 +12,18 @@ on:
 env:
   LEFTHOOK: 0
 
-defaults:
-  run:
-    # change this if your nextjs app does not live at the root of the repo
-    working-directory: ./apps/web/
-
 permissions:
   contents: read
 
 jobs:
-  analyze-bundle:
-    env:
-      SKIP_ENV_VALIDATION: true
+  analyze-bundle-shard:
     runs-on: ubuntu-24.04
     permissions:
       pull-requests: write
+    strategy:
+      matrix:
+        apps:
+          - web
     steps:
       - name: Harden Runner
         uses: step-security/harden-runner@ec9f2d5744a09debf3a187a3f4f675c53b671911 # v2.13.0
@@ -52,32 +49,35 @@ jobs:
         env:
           cache-name: cache-next-build
         with:
-          path: .next/cache
+          path: ./apps/${{ matrix.apps }}/.next/cache
           # change this if you prefer a more strict cache
           key: ${{ runner.os }}-build-${{ env.cache-name }}
 
       - name: Build next.js app
         # change this if your site requires a custom build command
-        run: bun run build
+        run: bun run build --filter ${{ matrix.apps }}
 
       # Here's the first place where next-bundle-analysis' own script is used
       # This step pulls the raw bundle stats for the current bundle
       - name: Analyze bundle
+        working-directory: ./apps/${{ matrix.apps }}
         run: bun ./scripts/reportBundleSize.js
 
       - name: Upload bundle
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
-          name: bundle
-          path: ./apps/web/.next/analyze/__bundle_analysis.json
+          name: apps-${{ matrix.apps }}-bundle
+          path: ./apps/${{ matrix.apps }}/.next/analyze/__bundle_analysis.json
 
       - name: Download base branch bundle stats
-        uses: dawidd6/action-download-artifact@20319c5641d495c8a52e688b7dc5fada6c3a9fbc # v8
+        # renovate: datasource=github-releases depName=dawidd6/action-download-artifact
+        uses: dawidd6/action-download-artifact@20319c5641d495c8a52e688b7dc5fada6c3a9fbc # v11
         if: success() && github.event.number
         with:
+          name: apps-${{ matrix.apps }}-bundle
           workflow: nextjs_bundle_analysis.yml
           branch: ${{ github.event.pull_request.base.ref }}
-          path: ./apps/web/.next/analyze/base
+          path: ./apps/${{ matrix.apps }}/.next/analyze/base/bundle
 
       # And here's the second place - this runs after we have both the current and
       # base branch bundle stats, and will compare them to determine what changed.
@@ -94,6 +94,7 @@ jobs:
       # entry in your package.json file.
       - name: Compare with base branch bundle
         if: success() && github.event.number
+        working-directory: ./apps/${{ matrix.apps }}
         run: ls -laR .next/analyze/base && bunx compare
 
       - name: Get Comment Body
@@ -102,7 +103,7 @@ jobs:
         # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
         run: |
           echo "body<<EOF" >> $GITHUB_OUTPUT
-          echo "$(cat .next/analyze/__bundle_analysis_comment.txt)" >> $GITHUB_OUTPUT
+          echo "$(cat ./apps/${{ matrix.apps }}/.next/analyze/__bundle_analysis_comment.txt)" >> $GITHUB_OUTPUT
           echo EOF >> $GITHUB_OUTPUT
 
       - name: Find Comment
@@ -128,3 +129,11 @@ jobs:
           body: ${{ steps.get-comment-body.outputs.body }}
           comment-id: ${{ steps.fc.outputs.comment-id }}
           edit-mode: replace
+
+  analyze-bundle:
+    runs-on: ubuntu-24.04
+    needs:
+      - analyze-bundle-shard
+    steps:
+      - if: ${{ contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled') }}
+        run: exit 1
