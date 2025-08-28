@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
 
   output: "standalone",
-  outputFileTracingRoot: path.join(__dirname, "../../"),
+  outputFileTracingRoot: path.join(import.meta.dirname, "../../"),
 
   typedRoutes: true,
 
