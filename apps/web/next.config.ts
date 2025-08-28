@@ -7,6 +7,8 @@ const nextConfig: NextConfig = {
   output: "standalone",
   outputFileTracingRoot: path.join(__dirname, "../../"),
 
+  typedRoutes: true,
+
   async rewrites() {
     return await [
       { source: "/healthz", destination: "/api/health" },
