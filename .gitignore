@@ -50,3 +50,9 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Cache Files
+.eslintcache
+.eslintmdcache
+.stylelintcache
+.prettiercache
