@@ -54,7 +54,7 @@
     "@types/node": "24.7.2",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.1",
-    "bunchee": "6.6.0",
+    "bunchee": "6.6.1",
     "eslint": "9.37.0",
     "prettier-plugin-css-order": "2.1.2",
     "prettier-plugin-tailwindcss": "0.6.14",
