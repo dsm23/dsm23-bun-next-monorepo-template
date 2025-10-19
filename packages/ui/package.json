@@ -57,7 +57,7 @@
     "bunchee": "6.6.2",
     "eslint": "9.37.0",
     "prettier-plugin-css-order": "2.1.2",
-    "prettier-plugin-tailwindcss": "0.7.0",
+    "prettier-plugin-tailwindcss": "0.7.1",
     "typescript": "5.9.3"
   },
   "peerDependencies": {
