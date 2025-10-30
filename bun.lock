@@ -37,7 +37,6 @@
         "eslint": "9.38.0",
         "prettier-plugin-css-order": "2.1.2",
         "prettier-plugin-tailwindcss": "0.7.1",
-        "signal-exit": "4.1.0",
         "typed-query-selector": "2.12.0",
         "typescript": "5.9.3",
       },
