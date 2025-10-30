@@ -9,7 +9,9 @@
     "dist"
   ],
   "exports": {
-    "./button": {
+    "./globals.css": "./src/styles/globals.css",
+    "./postcss.config": "./postcss.config.js",
+    "./components/button": {
       "import": {
         "types": "./dist/es/button.d.ts",
         "default": "./dist/es/button.js"
@@ -19,51 +21,72 @@
         "default": "./dist/cjs/button.cjs"
       }
     },
-    "./card": {
+    "./components/dropdown-menu": {
       "import": {
-        "types": "./dist/es/card.d.ts",
-        "default": "./dist/es/card.js"
+        "types": "./dist/es/dropdown-menu.d.ts",
+        "default": "./dist/es/dropdown-menu.js"
       },
       "require": {
-        "types": "./dist/cjs/card.d.cts",
-        "default": "./dist/cjs/card.cjs"
+        "types": "./dist/cjs/dropdown-menu.d.cts",
+        "default": "./dist/cjs/dropdown-menu.cjs"
       }
     },
-    "./code": {
+    "./components/theme-provider": {
       "import": {
-        "types": "./dist/es/code.d.ts",
-        "default": "./dist/es/code.js"
+        "types": "./dist/es/theme-provider.d.ts",
+        "default": "./dist/es/theme-provider.js"
       },
       "require": {
-        "types": "./dist/cjs/code.d.cts",
-        "default": "./dist/cjs/code.cjs"
+        "types": "./dist/cjs/theme-provider.d.cts",
+        "default": "./dist/cjs/theme-provider.cjs"
+      }
+    },
+    "./lib/utils": {
+      "import": {
+        "types": "./dist/es/utils.d.ts",
+        "default": "./dist/es/utils.js"
+      },
+      "require": {
+        "types": "./dist/cjs/utils.d.cts",
+        "default": "./dist/cjs/utils.cjs"
       }
     }
   },
   "scripts": {
     "build": "bunchee",
     "dev": "bunchee --watch",
-    "lint": "eslint . --max-warnings 0",
-    "generate:component": "turbo gen react-component",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "lint:css": "stylelint \"**/*.css\" --max-warnings 0 --allow-empty-input --cache --cache-strategy=content --cache-location=.stylelintcache",
+    "lint:js": "eslint . --max-warnings 0",
+    "lint": "run-p lint:js lint:css",
+    "generate:component": "turbo gen react-component"
+  },
+  "dependencies": {
+    "@radix-ui/react-dropdown-menu": "2.1.15",
+    "@radix-ui/react-slot": "1.2.3",
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "lucide-react": "0.539.0",
+    "next-themes": "0.4.6",
+    "tailwind-merge": "3.3.1"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
+    "@repo/stylelint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@turbo/gen": "2.5.8",
-    "@types/node": "24.9.1",
-    "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2",
     "bunchee": "6.6.2",
     "eslint": "9.38.0",
+    "npm-run-all2": "8.0.4",
     "prettier-plugin-css-order": "2.1.2",
     "prettier-plugin-tailwindcss": "0.7.1",
     "typescript": "5.9.3"
   },
   "peerDependencies": {
-    "@types/react": ">=19",
-    "@types/react-dom": ">=19",
-    "react": ">=19",
-    "react-dom": ">=19"
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
   }
 }
