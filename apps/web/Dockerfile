@@ -19,6 +19,11 @@ RUN turbo prune web --docker
 # so we are adding it back in the web package.json
 # TODO: remove signal-exit from web package.json dependencies when turborepo is fixed
 
+# added packages @emnapi/core, @emnapi/wasi-threads and @tybys/wasm-util because
+# I was receiving errors about them during pruning. Specifically:
+# Warning: Unable to calculate transitive closures: No lockfile entry found for <dependency>
+# TODO: remove these packages from web package.json dependencies when turborepo is fixed
+
 # Add lockfile and package.json's of isolated subworkspace
 FROM base AS installer
 WORKDIR /app
