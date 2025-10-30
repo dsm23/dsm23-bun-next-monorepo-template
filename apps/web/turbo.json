@@ -1,0 +1,14 @@
+{
+  "extends": ["//"],
+  "tasks": {
+    "check-types": {
+      "dependsOn": ["^check-types", "transit", "@repo/ui#build"]
+    },
+    "dev": {
+      "with": ["@repo/ui#dev"]
+    },
+    "e2e": {
+      "dependsOn": ["^e2e", "transit", "@repo/ui#build"]
+    }
+  }
+}

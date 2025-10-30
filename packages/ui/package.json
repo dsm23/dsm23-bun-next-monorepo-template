@@ -9,8 +9,6 @@
     "dist"
   ],
   "exports": {
-    "./globals.css": "./src/styles/globals.css",
-    "./postcss.config": "./postcss.config.js",
     "./components/button": {
       "import": {
         "types": "./dist/es/button.d.ts",
