@@ -15,10 +15,6 @@ COPY . .
 # Assuming "web" is the name entered in the project's package.json: { name: "web" }
 RUN turbo prune web --docker
 
-# the pruning process was deleting a buried dependency called signal-exit
-# so we are adding it back in the web package.json
-# TODO: remove signal-exit from web package.json dependencies when turborepo is fixed
-
 # added packages @emnapi/core, @emnapi/wasi-threads and @tybys/wasm-util because
 # I was receiving errors about them during pruning. Specifically:
 # Warning: Unable to calculate transitive closures: No lockfile entry found for <dependency>
