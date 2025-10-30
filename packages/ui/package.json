@@ -39,6 +39,16 @@
         "default": "./dist/cjs/theme-provider.cjs"
       }
     },
+    "./hooks/use-mounted": {
+      "import": {
+        "types": "./dist/es/use-mounted.d.ts",
+        "default": "./dist/es/use-mounted.js"
+      },
+      "require": {
+        "types": "./dist/cjs/use-mounted.d.cts",
+        "default": "./dist/cjs/use-mounted.cjs"
+      }
+    },
     "./lib/utils": {
       "import": {
         "types": "./dist/es/utils.d.ts",
