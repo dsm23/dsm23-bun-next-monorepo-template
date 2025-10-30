@@ -1,0 +1,14 @@
+{
+  "name": "@repo/postcss-config",
+  "version": "0.0.0",
+  "type": "module",
+  "sideEffects": false,
+  "license": "MIT",
+  "exports": {
+    ".": "./postcss.config.js"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.1.16",
+    "postcss": "8.5.6"
+  }
+}
