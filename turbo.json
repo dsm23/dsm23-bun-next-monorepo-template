@@ -28,6 +28,7 @@
     "test": {
       "dependsOn": ["^test"]
     },
+    "transit": {},
     "dev": {
       "cache": false,
       "persistent": true
