@@ -77,11 +77,14 @@
     {
       "groupName": "bun monorepo",
       "matchPackageNames": ["bun", "@types/bun", "oven/bun"]
+    },
+    {
+      "description": "Stricter security:minimumReleaseAgeNpm",
+      "matchDatasources": ["npm"],
+      "matchManagers": ["bun"],
+      "minimumReleaseAge": "3 days"
     }
   ],
-  "bun": {
-    "minimumReleaseAge": "3 days"
-  },
   "rebaseWhen": "conflicted",
   "patch": {
     "rebaseWhen": "behind-base-branch"
