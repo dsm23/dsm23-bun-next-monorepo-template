@@ -14,7 +14,7 @@
     "@commitlint/cli": "20.1.0",
     "@commitlint/config-conventional": "20.0.0",
     "@commitlint/types": "20.0.0",
-    "@emnapi/core": "1.6.0",
+    "@emnapi/core": "1.7.0",
     "@emnapi/wasi-threads": "1.1.0",
     "@ianvs/prettier-plugin-sort-imports": "4.7.0",
     "@tybys/wasm-util": "0.10.1",
