@@ -82,7 +82,9 @@
       "description": "Stricter security:minimumReleaseAgeNpm",
       "matchDatasources": ["npm"],
       "matchManagers": ["bun"],
-      "minimumReleaseAge": "3 days"
+      "minimumReleaseAge": "3 days",
+      "internalChecksFilter": "strict",
+      "prCreation": "not-pending"
     }
   ],
   "rebaseWhen": "conflicted",
