@@ -83,7 +83,7 @@
     "@repo/stylelint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@turbo/gen": "2.6.0",
-    "@types/react-dom": "19.2.2",
+    "@types/react-dom": "19.2.3",
     "bunchee": "6.6.2",
     "eslint": "9.39.1",
     "npm-run-all2": "8.0.4",
@@ -92,8 +92,8 @@
     "typescript": "5.9.3"
   },
   "peerDependencies": {
-    "@types/react": "19.2.2",
-    "@types/react-dom": "19.2.2",
+    "@types/react": "19.2.4",
+    "@types/react-dom": "19.2.3",
     "react": "19.2.0",
     "react-dom": "19.2.0"
   }
