@@ -75,6 +75,10 @@
       ]
     },
     {
+      "groupName": "turbo monorepo",
+      "matchPackageNames": ["@turbo/**", "eslint-plugin-turbo", "turbo"]
+    },
+    {
       "groupName": "bun monorepo",
       "matchPackageNames": ["bun", "@types/bun", "oven/bun"]
     },
