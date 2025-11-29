@@ -1,18 +1,28 @@
 import js from "@eslint/js";
-import eslintConfigPrettier from "eslint-config-prettier";
+import prettier from "eslint-config-prettier";
 import onlyWarn from "eslint-plugin-only-warn";
 import turboPlugin from "eslint-plugin-turbo";
+import { defineConfig, globalIgnores } from "eslint/config";
 import tseslint from "typescript-eslint";
 
-/**
- * A shared ESLint configuration for the repository.
- *
- * @type {import("eslint").Linter.Config}
- * */
-export const config = [
+export const config = defineConfig(
+  globalIgnores(["dist/**"]),
+  prettier,
   js.configs.recommended,
-  eslintConfigPrettier,
-  ...tseslint.configs.recommended,
+  tseslint.configs.recommended,
+  {
+    files: ["**/{apps,packages}/**/src/**/*.{js,mjs,cjs,ts,jsx,tsx}"],
+    extends: [
+      tseslint.configs.strictTypeChecked,
+      tseslint.configs.stylisticTypeChecked,
+    ],
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigDirName: import.meta.dirname,
+      },
+    },
+  },
   {
     plugins: {
       turbo: turboPlugin,
@@ -27,6 +37,14 @@ export const config = [
     },
   },
   {
-    ignores: ["dist/**"],
+    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
+    rules: {
+      "no-console": [
+        "error",
+        {
+          allow: ["debug", "error", "info", "trace", "warn"],
+        },
+      ],
+    },
   },
-];
+);
