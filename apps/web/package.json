@@ -23,7 +23,7 @@
     "@repo/postcss-config": "workspace:*",
     "@repo/tailwind-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@tailwindcss/postcss": "4.1.17",
+    "@tailwindcss/postcss": "4.1.18",
     "@total-typescript/ts-reset": "0.6.1",
     "@types/node": "24.10.3",
     "@types/react": "19.2.7",
@@ -31,7 +31,7 @@
     "eslint": "9.39.1",
     "prettier-plugin-css-order": "2.1.2",
     "prettier-plugin-tailwindcss": "0.7.2",
-    "tailwindcss": "4.1.17",
+    "tailwindcss": "4.1.18",
     "typed-query-selector": "2.12.0",
     "typescript": "5.9.3"
   }
