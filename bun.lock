@@ -8,10 +8,7 @@
         "@commitlint/cli": "20.2.0",
         "@commitlint/config-conventional": "20.2.0",
         "@commitlint/types": "20.2.0",
-        "@emnapi/core": "1.7.1",
-        "@emnapi/wasi-threads": "1.1.0",
         "@ianvs/prettier-plugin-sort-imports": "4.7.0",
-        "@tybys/wasm-util": "0.10.1",
         "lefthook": "2.0.12",
         "nextjs-bundle-analysis": "0.5.0",
         "prettier": "3.7.4",
@@ -222,11 +219,7 @@
 
     "@dual-bundle/import-meta-resolve": ["@dual-bundle/import-meta-resolve@4.2.1", "", {}, "sha512-id+7YRUgoUX6CgV0DtuhirQWodeeA7Lf4i2x71JS/vtA5pRb/hIGWlw+G6MeXvsM+MXrz0VAydTGElX1rAfgPg=="],
 
-    "@emnapi/core": ["@emnapi/core@1.7.1", "", { "dependencies": { "@emnapi/wasi-threads": "1.1.0", "tslib": "^2.4.0" } }, "sha512-o1uhUASyo921r2XtHYOHy7gdkGLge8ghBEQHMWmyJFoXlpU58kIrhhN3w26lpQb6dspetweapMn2CSNwQ8I4wg=="],
-
     "@emnapi/runtime": ["@emnapi/runtime@1.6.0", "", { "dependencies": { "tslib": "^2.4.0" } }, "sha512-obtUmAHTMjll499P+D9A3axeJFlhdjOWdKUNs/U6QIGT7V5RjcUW1xToAzjvmgTSQhDbYn/NwfTRoJcQ2rNBxA=="],
-
-    "@emnapi/wasi-threads": ["@emnapi/wasi-threads@1.1.0", "", { "dependencies": { "tslib": "^2.4.0" } }, "sha512-WI0DdZ8xFSbgMjR1sFsKABJ/C5OnRrjT06JXbZKexJGrDuPTzZdDYfFlsgcCXCyf+suG5QU2e/y1Wo2V/OapLQ=="],
 
     "@eslint-community/eslint-utils": ["@eslint-community/eslint-utils@4.9.0", "", { "dependencies": { "eslint-visitor-keys": "^3.4.3" }, "peerDependencies": { "eslint": "^6.0.0 || ^7.0.0 || >=8.0.0" } }, "sha512-ayVFHdtZ+hsq1t2Dy24wCmGXGe4q9Gu3smhLYALJrr473ZH27MsnSL+LKUlimp4BWJqMDMLmPpx/Q9R3OAlL4g=="],
 
@@ -547,8 +540,6 @@
     "@turbo/gen": ["@turbo/gen@2.6.3", "", { "dependencies": { "@turbo/workspaces": "2.6.3", "commander": "^10.0.0", "fs-extra": "^10.1.0", "inquirer": "^8.2.4", "minimatch": "^9.0.0", "node-plop": "^0.26.3", "picocolors": "1.0.1", "proxy-agent": "^6.5.0", "ts-node": "^10.9.2", "update-check": "^1.5.4", "validate-npm-package-name": "^5.0.0" }, "bin": { "gen": "dist/cli.js" } }, "sha512-q1QrS6ukleoCoNV0eTflMeDxJSdDJkQt0idfN/8TrMqrcOl1oRI3iYpizZR0paiPWe7lTpRr6fG7pGSKGZ+15A=="],
 
     "@turbo/workspaces": ["@turbo/workspaces@2.6.3", "", { "dependencies": { "commander": "^10.0.0", "execa": "5.1.1", "fast-glob": "^3.2.12", "fs-extra": "^10.1.0", "gradient-string": "^2.0.0", "inquirer": "^8.0.0", "js-yaml": "^4.1.0", "ora": "4.1.1", "picocolors": "1.0.1", "semver": "7.6.2", "update-check": "^1.5.4" }, "bin": { "workspaces": "dist/cli.js" } }, "sha512-RLOjHQIZeCGwVBCRr8pfyshUJn2wx8s5n1H0O9fhpsL6qaWKi9gKoUJMr8BMVJApJGrspJ/QkQzsL8gLicpZbQ=="],
-
-    "@tybys/wasm-util": ["@tybys/wasm-util@0.10.1", "", { "dependencies": { "tslib": "^2.4.0" } }, "sha512-9tTaPJLSiejZKx+Bmog4uSubteqTvFrVrURwkmHixBo0G4seD0zUxp98E1DzUBJxLQ3NPwXrGKDiVjwx/DpPsg=="],
 
     "@types/conventional-commits-parser": ["@types/conventional-commits-parser@5.0.2", "", { "dependencies": { "@types/node": "*" } }, "sha512-BgT2szDXnVypgpNxOK8aL5SGjUdaQbC++WZNjF1Qge3Og2+zhHj+RWhmehLhYyvQwqAmvezruVfOf8+3m74W+g=="],
 
