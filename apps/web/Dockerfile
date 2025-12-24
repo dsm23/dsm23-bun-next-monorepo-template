@@ -3,7 +3,7 @@
 FROM oven/bun:1.3.5-alpine@sha256:7156fcc0cee0194d390bfaf7f0eeda9a5e383e70cc90f31aad3a2440a033d7dc AS base
 
 # renovate: datasource=npm depName=turbo
-ARG TURBO_VERSION="2.7.0"
+ARG TURBO_VERSION="2.7.1"
 
 FROM base AS builder
 WORKDIR /app
