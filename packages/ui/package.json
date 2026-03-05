@@ -87,8 +87,6 @@
     "bunchee": "6.9.3",
     "eslint": "9.39.2",
     "npm-run-all2": "8.0.4",
-    "prettier-plugin-css-order": "2.2.0",
-    "prettier-plugin-tailwindcss": "0.7.2",
     "stylelint": "16.26.1",
     "typescript": "5.9.3"
   },
