@@ -10,14 +10,14 @@
     "check-types": "turbo run check-types"
   },
   "devDependencies": {
-    "@commitlint/cli": "20.3.0",
-    "@commitlint/config-conventional": "20.3.0",
-    "@commitlint/types": "20.2.0",
-    "lefthook": "2.0.13",
+    "@commitlint/cli": "20.5.0",
+    "@commitlint/config-conventional": "20.5.0",
+    "@commitlint/types": "20.5.0",
+    "lefthook": "2.1.4",
     "nextjs-bundle-analysis": "0.5.0",
-    "oxfmt": "0.36.0",
-    "turbo": "2.7.3",
-    "typescript": "5.9.3"
+    "oxfmt": "0.42.0",
+    "turbo": "2.8.21",
+    "typescript": "6.0.2"
   },
   "engines": {
     "node": ">=18"
