@@ -11,62 +11,41 @@
   "exports": {
     "./components/button": {
       "import": {
-        "types": "./dist/es/button.d.ts",
-        "default": "./dist/es/button.js"
-      },
-      "require": {
-        "types": "./dist/cjs/button.d.cts",
-        "default": "./dist/cjs/button.cjs"
+        "types": "./dist/components/button/index.d.mts",
+        "default": "./dist/components/button/index.mjs"
       }
     },
     "./components/dropdown-menu": {
       "import": {
-        "types": "./dist/es/dropdown-menu.d.ts",
-        "default": "./dist/es/dropdown-menu.js"
-      },
-      "require": {
-        "types": "./dist/cjs/dropdown-menu.d.cts",
-        "default": "./dist/cjs/dropdown-menu.cjs"
+        "types": "./dist/components/dropdown-menu/index.mts",
+        "default": "./dist/components/dropdown-menu/index.mjs"
       }
     },
     "./components/theme-provider": {
       "import": {
-        "types": "./dist/es/theme-provider.d.ts",
-        "default": "./dist/es/theme-provider.js"
-      },
-      "require": {
-        "types": "./dist/cjs/theme-provider.d.cts",
-        "default": "./dist/cjs/theme-provider.cjs"
+        "types": "./dist/components/theme-provider/index.mts",
+        "default": "./dist/components/theme-provider/index.mjs"
       }
     },
     "./hooks/use-mounted": {
       "import": {
-        "types": "./dist/es/use-mounted.d.ts",
-        "default": "./dist/es/use-mounted.js"
-      },
-      "require": {
-        "types": "./dist/cjs/use-mounted.d.cts",
-        "default": "./dist/cjs/use-mounted.cjs"
+        "types": "./dist/hooks/use-mounted/index.mts",
+        "default": "./dist/hooks/use-mounted/index.mjs"
       }
     },
     "./lib/utils": {
       "import": {
-        "types": "./dist/es/utils.d.ts",
-        "default": "./dist/es/utils.js"
-      },
-      "require": {
-        "types": "./dist/cjs/utils.d.cts",
-        "default": "./dist/cjs/utils.cjs"
+        "types": "./dist/lib/utils/index.mts",
+        "default": "./dist/lib/utils/index.mjs"
       }
     }
   },
   "scripts": {
-    "build": "bunchee",
-    "dev": "bunchee --watch",
+    "build": "tsdown",
+    "dev": "tsdown --watch",
     "check-types": "tsc --noEmit",
-    "lint:bunchee": "bunchee lint",
     "lint:js": "eslint . --max-warnings 0",
-    "lint": "run-p lint:bunchee lint:js",
+    "lint": "run-p lint:js",
     "generate:component": "turbo gen react-component"
   },
   "dependencies": {
@@ -84,10 +63,10 @@
     "@repo/typescript-config": "workspace:*",
     "@turbo/gen": "2.8.21",
     "@types/react-dom": "19.2.3",
-    "bunchee": "6.9.4",
     "eslint": "9.39.2",
     "npm-run-all2": "8.0.4",
     "stylelint": "17.6.0",
+    "tsdown": "0.21.7",
     "typescript": "6.0.2"
   },
   "peerDependencies": {
