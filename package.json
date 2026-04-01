@@ -15,8 +15,7 @@
     "@commitlint/types": "20.5.0",
     "lefthook": "2.1.4",
     "oxfmt": "0.42.0",
-    "turbo": "2.8.21",
-    "typescript": "6.0.2"
+    "turbo": "2.8.21"
   },
   "engines": {
     "node": ">=18"

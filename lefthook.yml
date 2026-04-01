@@ -4,15 +4,14 @@ pre-commit:
     oxfmt:
       run: ./node_modules/.bin/oxfmt --check --no-error-on-unmatched-pattern {staged_files}
 
-    eslint:
+    lint:
       run: ./node_modules/.bin/turbo run lint:lint-staged -- {staged_files}
       glob:
         - "*.ts"
         - "*.js"
         - "*.tsx"
         - "*.jsx"
-        - "*.md"
-        - "*.mdx"
+        - "*.css"
 
 commit-msg:
   commands:

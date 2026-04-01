@@ -52,10 +52,6 @@
       "minimumReleaseAgeBehaviour": "timestamp-optional"
     },
     {
-      "extends": ["packages:eslint"],
-      "groupName": "eslint packages"
-    },
-    {
       "extends": ["packages:react"],
       "groupName": "react packages"
     },
@@ -64,20 +60,12 @@
       "groupName": "stylelint packages"
     },
     {
-      "groupName": "nextjs monorepo",
-      "matchPackageNames": ["@next/**", "eslint-plugin-next", "next"]
-    },
-    {
       "groupName": "playwright monorepo",
       "matchPackageNames": [
         "playwright",
         "@playwright/test",
         "mcr.microsoft.com/playwright"
       ]
-    },
-    {
-      "groupName": "turbo monorepo",
-      "matchPackageNames": ["@turbo/**", "eslint-plugin-turbo", "turbo"]
     },
     {
       "groupName": "bun monorepo",

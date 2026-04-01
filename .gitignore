@@ -52,6 +52,4 @@ yarn-error.log*
 *.sw?
 
 # Cache Files
-.eslintcache
-.eslintmdcache
 .stylelintcache
