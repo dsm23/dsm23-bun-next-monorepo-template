@@ -1,0 +1,23 @@
+{
+  "name": "@repo/oxlint-config",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "imports": {
+    "#base": "./src/base.ts",
+    "#react": "./src/react.ts"
+  },
+  "exports": {
+    "./base": "./src/base.ts",
+    "./next": "./src/next.ts",
+    "./react": "./src/react.ts"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "typescript": "6.0.2"
+  },
+  "peerDependencies": {
+    "oxlint": "1.57.0",
+    "oxlint-tsgolint": "0.18.1"
+  }
+}

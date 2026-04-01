@@ -44,7 +44,7 @@
     "build": "tsdown",
     "dev": "tsdown --watch",
     "check-types": "tsc --noEmit",
-    "lint:js": "eslint . --max-warnings 0",
+    "lint:js": "oxlint . --report-unused-disable-directives --max-warnings 0",
     "lint": "run-p lint:js",
     "generate:component": "turbo gen react-component"
   },
@@ -57,13 +57,14 @@
     "tailwind-merge": "3.5.0"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
+    "@repo/oxlint-config": "workspace:*",
     "@repo/stylelint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@turbo/gen": "2.8.21",
     "@types/react-dom": "19.2.3",
-    "eslint": "9.39.2",
     "npm-run-all2": "8.0.4",
+    "oxlint": "1.57.0",
+    "oxlint-tsgolint": "0.18.1",
     "stylelint": "17.6.0",
     "tsdown": "0.21.7",
     "typescript": "6.0.2"

@@ -1,6 +1,9 @@
 {
   "extends": ["//"],
   "tasks": {
+    "build": {
+      "dependsOn": ["transit", "@repo/ui#build"]
+    },
     "check-types": {
       "dependsOn": ["^check-types", "transit", "@repo/ui#build"]
     },
@@ -9,6 +12,9 @@
     },
     "e2e": {
       "dependsOn": ["^e2e", "transit", "@repo/ui#build"]
+    },
+    "lint": {
+      "dependsOn": ["transit", "@repo/ui#build"]
     }
   }
 }
