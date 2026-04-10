@@ -30,7 +30,7 @@
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "npm-run-all2": "8.0.4",
-    "oxlint": "1.58.0",
+    "oxlint": "1.59.0",
     "oxlint-tsgolint": "0.20.0",
     "tailwindcss": "4.2.2",
     "typed-query-selector": "2.12.1",
