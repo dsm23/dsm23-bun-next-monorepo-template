@@ -15,7 +15,7 @@
     "@commitlint/types": "20.5.0",
     "knip": "6.4.1",
     "lefthook": "2.1.5",
-    "oxfmt": "0.44.0",
+    "oxfmt": "0.45.0",
     "turbo": "2.9.6"
   },
   "engines": {
