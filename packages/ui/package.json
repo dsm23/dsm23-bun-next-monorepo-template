@@ -62,9 +62,9 @@
     "@turbo/gen": "2.9.6",
     "@types/react-dom": "19.2.3",
     "npm-run-all2": "8.0.4",
-    "oxlint": "1.59.0",
-    "oxlint-tsgolint": "0.20.0",
-    "tsdown": "0.21.8",
+    "oxlint": "1.60.0",
+    "oxlint-tsgolint": "0.21.1",
+    "tsdown": "0.21.9",
     "typescript": "6.0.2"
   },
   "peerDependencies": {
