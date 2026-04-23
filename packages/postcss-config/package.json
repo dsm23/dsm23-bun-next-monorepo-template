@@ -11,6 +11,6 @@
     "postcss": "8.5.10"
   },
   "peerDependencies": {
-    "@tailwindcss/postcss": "4.2.2"
+    "@tailwindcss/postcss": "4.2.3"
   }
 }
