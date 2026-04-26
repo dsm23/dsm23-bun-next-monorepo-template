@@ -12,7 +12,7 @@
     "stylelint-selector-bem-pattern": "4.0.1"
   },
   "peerDependencies": {
-    "stylelint": "17.8.0"
+    "stylelint": "17.9.0"
   },
   "publishConfig": {
     "access": "public"
