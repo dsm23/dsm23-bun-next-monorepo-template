@@ -42,6 +42,8 @@ export default defineConfig({
     "no-empty-function": ["warn", { allow: ["arrowFunctions"] }],
     "no-negated-condition": "off",
     "no-optional-chaining": "off",
+    "jest/no-conditional-expect": "off",
+    "jest/no-conditional-in-test": "off",
     "typescript/consistent-type-imports": [
       "warn",
       {
