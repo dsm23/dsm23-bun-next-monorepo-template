@@ -4,7 +4,7 @@ FROM oven/bun:1.3.13-alpine@sha256:4de475389889577f346c636f956b42a5c31501b654664
 FROM dhi.io/bun:1.3.13-alpine3.22@sha256:6b9638f4cfc040b36fc74a7297d0830ec0e6ed8fab3f501cb2ba33571a0ce9be AS hardened
 
 # renovate: datasource=npm depName=turbo
-ARG TURBO_VERSION="2.9.6"
+ARG TURBO_VERSION="2.9.7"
 
 FROM base AS builder
 WORKDIR /app

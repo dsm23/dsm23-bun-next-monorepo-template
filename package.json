@@ -16,7 +16,7 @@
     "knip": "6.9.0",
     "lefthook": "2.1.6",
     "oxfmt": "0.47.0",
-    "turbo": "2.9.6"
+    "turbo": "2.9.7"
   },
   "engines": {
     "node": ">=18"
