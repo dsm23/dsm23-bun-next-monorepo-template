@@ -59,7 +59,7 @@
   "devDependencies": {
     "@repo/oxlint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@turbo/gen": "2.9.7",
+    "@turbo/gen": "2.9.8",
     "@types/react-dom": "19.2.3",
     "npm-run-all2": "8.0.4",
     "oxlint": "1.62.0",
