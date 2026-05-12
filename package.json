@@ -13,7 +13,7 @@
     "@commitlint/cli": "21.0.0",
     "@commitlint/config-conventional": "21.0.0",
     "@commitlint/types": "21.0.0",
-    "knip": "6.12.1",
+    "knip": "6.12.2",
     "lefthook": "2.1.6",
     "oxfmt": "0.48.0",
     "turbo": "2.9.12"
