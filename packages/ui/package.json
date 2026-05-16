@@ -64,7 +64,7 @@
     "npm-run-all2": "8.0.4",
     "oxlint": "1.62.0",
     "oxlint-tsgolint": "0.22.1",
-    "tsdown": "0.21.10",
+    "tsdown": "0.22.0",
     "typescript": "6.0.3"
   },
   "peerDependencies": {
