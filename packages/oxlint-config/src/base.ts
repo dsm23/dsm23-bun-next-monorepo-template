@@ -1,7 +1,7 @@
 import { defineConfig } from "oxlint";
 
 export default defineConfig({
-  plugins: ["eslint", "oxc", "promise", "typescript", "unicorn", "vitest"],
+  plugins: ["eslint", "oxc", "promise", "typescript", "unicorn"],
   categories: {
     correctness: "warn",
     suspicious: "warn",
@@ -42,8 +42,6 @@ export default defineConfig({
     "no-empty-function": ["warn", { allow: ["arrowFunctions"] }],
     "no-negated-condition": "off",
     "no-optional-chaining": "off",
-    "jest/no-conditional-expect": "off",
-    "jest/no-conditional-in-test": "off",
     "typescript/consistent-type-imports": [
       "warn",
       {
@@ -64,15 +62,32 @@ export default defineConfig({
         case: "camelCase",
       },
     ],
-    "vitest/consistent-vitest-vi": "warn",
-    "vitest/no-conditional-expect": "off",
-    "vitest/no-conditional-in-test": "off",
-    "vitest/no-importing-vitest-globals": "off",
-    "vitest/no-standalone-expect": [
-      "warn",
-      {
-        additionalTestBlockFunctions: ["fc.property"],
-      },
-    ],
   },
+  overrides: [
+    {
+      files: [
+        "**/*.{spec,test}.{ts,tsx,js,jsx}",
+        "**/{spec,test}.{ts,tsx,js,jsx}",
+        "**/__tests__/**/*",
+      ],
+      rules: {
+        "jest/no-conditional-expect": "off",
+        "jest/no-conditional-in-test": "off",
+        "jsx-a11y/control-has-associated-label": "off",
+        "unicorn/consistent-function-scoping": "off",
+        "vitest/consistent-vitest-vi": "warn",
+        "vitest/no-conditional-expect": "off",
+        "vitest/no-conditional-in-test": "off",
+        "vitest/no-importing-vitest-globals": "off",
+        "vitest/no-standalone-expect": [
+          "warn",
+          {
+            additionalTestBlockFunctions: ["fc.property"],
+          },
+        ],
+        "vitest/require-test-timeout": "off",
+      },
+      plugins: ["vitest"],
+    },
+  ],
 });
