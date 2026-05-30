@@ -27,11 +27,7 @@ const config: KnipConfig = {
       // ignoreDependencies: ["eslint-plugin-storybook"],
     },
     "packages/stylelint-config": {
-      ignoreDependencies: [
-        "stylelint-config-standard",
-        "stylelint-order",
-        "stylelint-selector-bem-pattern",
-      ],
+      ignoreDependencies: ["stylelint-config-standard", "stylelint-order"],
     },
     "packages/typescript-config": {
       entry: ["base.json", "nextjs.json", "react-library.json"],
