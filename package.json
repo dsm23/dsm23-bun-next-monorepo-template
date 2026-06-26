@@ -10,9 +10,9 @@
     "check-types": "turbo run check-types"
   },
   "devDependencies": {
-    "@commitlint/cli": "21.0.2",
-    "@commitlint/config-conventional": "21.0.2",
-    "@commitlint/types": "21.0.1",
+    "@commitlint/cli": "21.1.0",
+    "@commitlint/config-conventional": "21.1.0",
+    "@commitlint/types": "21.1.0",
     "knip": "6.18.0",
     "lefthook": "2.1.9",
     "oxfmt": "0.56.0",
