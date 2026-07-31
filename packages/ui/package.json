@@ -61,7 +61,7 @@
     "@repo/typescript-config": "workspace:*",
     "@turbo/gen": "2.10.7",
     "@types/react-dom": "19.2.3",
-    "npm-run-all2": "9.0.2",
+    "npm-run-all2": "9.0.3",
     "oxlint": "1.69.0",
     "oxlint-tsgolint": "0.25.0",
     "tsdown": "0.21.10",
